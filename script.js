@@ -49,6 +49,11 @@
       el.setAttribute("placeholder", lang === "pt" ? el.dataset.phPt : el.dataset.phEn);
     });
 
+    /* alt de imagens */
+    $$("[data-alt-pt][data-alt-en]").forEach((el) => {
+      el.setAttribute("alt", lang === "pt" ? el.dataset.altPt : el.dataset.altEn);
+    });
+
     /* rótulos acessíveis */
     $$("[data-aria-pt][data-aria-en]").forEach((el) => {
       /* o botão do menu tem rótulo dinâmico — tratado em setMenu() */

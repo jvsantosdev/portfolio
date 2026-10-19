@@ -9,6 +9,8 @@ portfolio/
 ├── index.html   → todo o conteúdo (textos em PT e EN no mesmo arquivo)
 ├── styles.css   → design system + layout
 ├── script.js    → idioma, animações, menu, formulário
+├── assets/
+│   └── joao-vitor.webp  → retrato da seção "Sobre" (800×800, 86 KB)
 └── README.md
 ```
 
@@ -42,7 +44,8 @@ As cores não são decoração: coral aparece no que é interface (títulos de s
 1. **Contato** — seção `#contato` no `index.html` (e-mail, telefone, GitHub, LinkedIn) **e** a constante `CONTACT_EMAIL` no topo do `script.js`.
 2. **Projetos** — cada `<article class="project">` em `#projetos`: título, descrição, stack, link e a "maquete" SVG (desenhada em código, troque por `<img>` se preferir print real).
 3. **Sobre / Habilidades** — edite os textos e listas nas seções `#sobre` e `#habilidades`.
-4. **Cores e fontes** — tudo em `:root`, no começo do `styles.css`.
+4. **Foto** — troque `assets/joao-vitor.webp`. O enquadramento é quadrado (`1 / 1`) com `object-fit: cover`, então qualquer imagem funciona sem distorcer; o ideal é 800×800.
+5. **Cores e fontes** — tudo em `:root`, no começo do `styles.css`.
 
 ## Idioma (PT / EN)
 
@@ -55,6 +58,12 @@ Cada texto tem os atributos `data-pt` e `data-en`:
 O botão PT|EN troca tudo em tempo real, atualiza `<html lang>`, o `<title>` e a meta description, e guarda a escolha no `localStorage`.
 
 Para adicionar um texto novo, coloque os dois atributos — se o texto é igual nos dois idiomas (nomes próprios, tecnologias), deixe sem atributos.
+
+Imagens usam o mesmo esquema, com `data-alt-pt` / `data-alt-en`:
+
+```html
+<img src="assets/foto.webp" alt="Retrato de João Vítor" data-alt-pt="Retrato de João Vítor" data-alt-en="Portrait of João Vítor">
+```
 
 ## Formulário
 
