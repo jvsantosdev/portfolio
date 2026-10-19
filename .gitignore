@@ -1,0 +1,10 @@
+# Sistema operacional
+Thumbs.db
+Desktop.ini
+.DS_Store
+
+# Dependências (se um dia adicionar)
+node_modules/
+
+# Vercel
+.vercel/

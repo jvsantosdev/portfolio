@@ -1,0 +1,621 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>João Vítor Santos de Oliveira — Desenvolvedor Full-stack</title>
+  <meta name="description"
+    content="Portfólio de João Vitor Santos de Oliveira, desenvolvedor full-stack: React, Next.js, Python, Docker e IA (LLM + RAG).">
+  <meta name="color-scheme" content="dark">
+
+  <link rel="icon"
+    href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230D0F14'/%3E%3Ctext x='32' y='43' font-family='monospace' font-size='28' font-weight='700' fill='%23FF6B4A' text-anchor='middle'%3EJV%3C/text%3E%3C/svg%3E">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600&family=Bricolage+Grotesque:opsz,wght@12..96,400..800&family=IBM+Plex+Mono:wght@400;500&display=swap"
+    rel="stylesheet">
+
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+  <!--
+    ---------------------------------------------------------------
+    CONTEÚDO: extraído do currículo Joao_Vitor_Full_Stack.pdf
+    PARA AJUSTAR:
+      1. Contato (e-mail, telefone, links) -> seção #contato
+         + CONTACT_EMAIL no topo de script.js
+      2. Projetos -> cards em #projetos (título, descrição, link)
+      3. Textos "Sobre" e "Habilidades" -> conforme seu currículo
+    IDIOMA: todo texto tem data-pt / data-en. O seletor PT|EN da nav
+    troca tudo em tempo real e guarda a escolha no localStorage.
+    ---------------------------------------------------------------
+  -->
+
+  <a class="skip" href="#main" data-pt="Pular para o conteúdo" data-en="Skip to content">Pular para o conteúdo</a>
+
+  <div class="progress" aria-hidden="true"><span id="progressBar"></span></div>
+
+  <header class="nav" id="nav">
+    <div class="container nav__inner">
+      <a class="nav__brand" href="#top" aria-label="João Vítor — início">
+        <span class="nav__brand-long">João Vítor</span><span class="nav__brand-short">JV</span><span
+          class="nav__brand-dot">.</span>
+      </a>
+
+      <button class="nav__toggle" id="navToggle" type="button" aria-expanded="false" aria-controls="navLinks"
+        data-aria-pt="Abrir menu" data-aria-en="Open menu" aria-label="Abrir menu">
+        <span></span><span></span>
+      </button>
+
+      <nav class="nav__links" id="navLinks" aria-label="Navegação principal" data-aria-pt="Navegação principal"
+        data-aria-en="Main navigation">
+        <a class="nav__link" href="#projetos" data-pt="/projetos" data-en="/projects">/projetos</a>
+        <a class="nav__link" href="#sobre" data-pt="/sobre" data-en="/about">/sobre</a>
+        <a class="nav__link" href="#habilidades" data-pt="/habilidades" data-en="/skills">/habilidades</a>
+
+        <span class="lang" role="group" aria-label="Trocar idioma" data-aria-pt="Trocar idioma"
+          data-aria-en="Switch language">
+          <button type="button" class="lang__btn is-active" data-lang="pt" aria-pressed="true">PT</button>
+          <span class="lang__sep" aria-hidden="true">|</span>
+          <button type="button" class="lang__btn" data-lang="en" aria-pressed="false">EN</button>
+        </span>
+
+        <a class="btn btn--solid btn--sm nav__cta" href="#contato">
+          <span data-pt="Falar comigo" data-en="Get in touch">Falar comigo</span>
+        </a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+
+    <!-- ============ HERO ============ -->
+    <section class="hero" id="top">
+      <div class="container hero__inner">
+
+        <div class="hero__meta reveal">
+          <span class="status">
+            <span class="status__dot" aria-hidden="true"></span>
+            <span data-pt="Aberto a oportunidades full-time" data-en="Open to full-time opportunities">Aberto a
+              oportunidades full-time</span>
+          </span>
+          <span class="hero__loc" data-pt="Brasília · trabalho remoto" data-en="Brasília · remote work">Brasília ·
+            trabalho remoto</span>
+        </div>
+
+        <h1 class="hero__title reveal">
+          <span class="hero__line hero__line--client" data-pt="Da interface" data-en="From the interface">Da
+            interface</span>
+          <span class="hero__line hero__line--server" data-pt="ao sistema." data-en="to the system.">ao sistema.</span>
+        </h1>
+
+        <div class="hero__row reveal">
+          <p class="hero__lead"
+            data-pt="Desenvolvedor full-stack: interfaces em React e Next.js, APIs em Python e Node, e camadas de IA (LLM + RAG) ligadas aos dados do produto."
+            data-en="Full-stack developer: React and Next.js interfaces, Python and Node APIs, and AI layers (LLM + RAG) wired to the product's data.">
+            Desenvolvedor full-stack: interfaces em React e Next.js, APIs em Python e Node, e camadas de IA (LLM + RAG)
+            ligadas aos dados do produto.</p>
+
+          <div class="hero__actions">
+            <a class="btn btn--solid" href="#projetos">
+              <span data-pt="Ver projetos" data-en="See projects">Ver projetos</span>
+              <svg viewBox="0 0 16 16" aria-hidden="true" class="btn__arrow">
+                <path d="M3 8h10M9 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.6"
+                  stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+            </a>
+            <a class="btn btn--ghost" href="#contato">
+              <span data-pt="Falar comigo" data-en="Get in touch">Falar comigo</span>
+            </a>
+          </div>
+        </div>
+
+        <div class="trace reveal" aria-hidden="true">
+          <div class="trace__rail"><i class="trace__pulse"></i></div>
+          <div class="trace__labels">
+            <span data-pt="cliente" data-en="client">cliente</span>
+            <span>api</span>
+            <span data-pt="banco" data-en="database">banco</span>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ============ PROJETOS ============ -->
+    <section class="section" id="projetos">
+      <div class="container">
+
+        <header class="section__head reveal">
+          <p class="route">
+            <span class="route__dot route__dot--split" aria-hidden="true"></span>
+            <span class="route__path" data-pt="/projetos" data-en="/projects">/projetos</span>
+            <span class="route__rule" aria-hidden="true"></span>
+          </p>
+          <h2 class="section__title">
+            <span data-pt="Coisas que construí" data-en="Things I've built">Coisas que construí</span><br>
+            <span data-pt="de verdade." data-en="for real.">de verdade.</span>
+          </h2>
+          <p class="section__lede"
+            data-pt="Plataforma de IA, SaaS de suporte e triagem laboratorial: o que eu construo quando o problema é de verdade."
+            data-en="AI platform, support SaaS and lab triage: what I build when the problem is real.">Plataforma de IA,
+            SaaS de suporte e triagem laboratorial: o que eu construo quando o problema é de verdade.</p>
+        </header>
+
+        <div class="projects">
+
+          <!-- Projeto 1: AI Support Hub -->
+          <article class="project reveal">
+            <div class="project__thumb">
+              <svg viewBox="0 0 400 250" aria-hidden="true">
+                <rect width="400" height="250" rx="10" fill="#12151C" />
+                <circle cx="24" cy="26" r="5" fill="#2E3444" />
+                <circle cx="42" cy="26" r="5" fill="#2E3444" />
+                <circle cx="60" cy="26" r="5" fill="#2E3444" />
+                <rect x="86" y="19" width="150" height="14" rx="7" fill="#171B24" />
+                <rect x="326" y="17" width="54" height="18" rx="9" fill="none" stroke="#4EA8FF" stroke-opacity=".7" />
+                <text x="353" y="30" text-anchor="middle" fill="#4EA8FF" font-family="IBM Plex Mono, monospace"
+                  font-size="10">RAG</text>
+                <line x1="0" y1="46" x2="400" y2="46" stroke="#1D222E" />
+
+                <rect x="24" y="62" width="200" height="46" rx="10" fill="#171B24" stroke="#242936" />
+                <rect x="40" y="76" width="150" height="6" rx="3" fill="#3A4152" />
+                <rect x="40" y="90" width="104" height="6" rx="3" fill="#2E3444" />
+
+                <rect x="176" y="120" width="200" height="36" rx="10" fill="#FF6B4A" fill-opacity=".14" />
+                <rect x="192" y="133" width="132" height="6" rx="3" fill="#FF6B4A" fill-opacity=".85" />
+
+                <rect x="24" y="168" width="352" height="62" rx="10" fill="#171B24" stroke="#4EA8FF"
+                  stroke-opacity=".4" />
+                <rect x="40" y="182" width="242" height="6" rx="3" fill="#3A4152" />
+                <rect x="40" y="196" width="278" height="6" rx="3" fill="#2E3444" />
+                <rect x="40" y="210" width="150" height="6" rx="3" fill="#2E3444" />
+                <rect x="300" y="206" width="30" height="16" rx="4" fill="#4EA8FF" fill-opacity=".16" />
+                <rect x="336" y="206" width="30" height="16" rx="4" fill="#4EA8FF" fill-opacity=".16" />
+                <text x="315" y="217" text-anchor="middle" fill="#4EA8FF" font-family="IBM Plex Mono, monospace"
+                  font-size="9">1</text>
+                <text x="351" y="217" text-anchor="middle" fill="#4EA8FF" font-family="IBM Plex Mono, monospace"
+                  font-size="9">2</text>
+              </svg>
+            </div>
+            <div class="project__body">
+              <p class="tags">
+                <span class="tag tag--client"><i aria-hidden="true"></i><span data-pt="interface"
+                    data-en="interface">interface</span></span>
+                <span class="tag tag--server"><i aria-hidden="true"></i><span data-pt="sistema"
+                    data-en="system">sistema</span></span>
+              </p>
+              <h3 class="project__name">AI Support Hub</h3>
+              <p class="project__desc"
+                data-pt="SaaS de suporte B2B com chat citado por RAG. Integrei o billing com Stripe e atuei como code reviewer com contrato em primeiro lugar (OpenAPI, ADRs e testes)."
+                data-en="B2B support SaaS with RAG-cited chat. I integrated Stripe billing and worked as a code reviewer with a contract-first workflow (OpenAPI, ADRs and tests).">
+                SaaS de suporte B2B com chat citado por RAG. Integrei o billing com Stripe e atuei como code reviewer
+                com contrato em primeiro lugar (OpenAPI, ADRs e testes).</p>
+              <p class="project__stack">Next.js · FastAPI · PostgreSQL · pgvector · Redis · Celery · Stripe</p>
+              <p class="project__links">
+                <a class="link" href="https://github.com/jvsantosdev" target="_blank" rel="noopener">
+                  <span>GitHub</span>
+                  <svg viewBox="0 0 16 16" aria-hidden="true">
+                    <path d="M5 11L11 5M6 5h5v5" fill="none" stroke="currentColor" stroke-width="1.6"
+                      stroke-linecap="round" stroke-linejoin="round" />
+                  </svg>
+                </a>
+              </p>
+            </div>
+          </article>
+
+          <!-- Projeto 2: English for Dev -->
+          <article class="project reveal">
+            <div class="project__thumb">
+              <svg viewBox="0 0 400 250" aria-hidden="true">
+                <rect width="400" height="250" rx="10" fill="#12151C" />
+                <circle cx="28" cy="28" r="6" fill="#FF6B4A" />
+                <rect x="44" y="23" width="88" height="10" rx="5" fill="#2E3444" />
+
+                <rect x="24" y="54" width="256" height="8" rx="4" fill="#1E2330" />
+                <rect x="24" y="54" width="168" height="8" rx="4" fill="#FF6B4A" />
+                <text x="376" y="62" text-anchor="end" fill="#8D93A3" font-family="IBM Plex Mono, monospace"
+                  font-size="10">65%</text>
+
+                <rect x="24" y="78" width="352" height="64" rx="10" fill="#171B24" stroke="#242936" />
+                <rect x="40" y="90" width="56" height="17" rx="8.5" fill="none" stroke="#4EA8FF" stroke-opacity=".55" />
+                <text x="68" y="102" text-anchor="middle" fill="#4EA8FF" font-family="IBM Plex Mono, monospace"
+                  font-size="9">gemini</text>
+                <rect x="40" y="116" width="250" height="7" rx="3.5" fill="#3A4152" />
+                <rect x="40" y="130" width="170" height="7" rx="3.5" fill="#2E3444" />
+
+                <rect x="24" y="154" width="352" height="26" rx="6" fill="#FF6B4A" fill-opacity=".12" stroke="#FF6B4A"
+                  stroke-opacity=".65" />
+                <circle cx="42" cy="167" r="6" fill="none" stroke="#FF6B4A" />
+                <circle cx="42" cy="167" r="3" fill="#FF6B4A" />
+                <rect x="60" y="164" width="150" height="6" rx="3" fill="#EFEAE0" fill-opacity=".85" />
+
+                <rect x="24" y="186" width="352" height="26" rx="6" fill="#171B24" stroke="#242936" />
+                <circle cx="42" cy="199" r="6" fill="none" stroke="#3A4152" />
+                <rect x="60" y="196" width="186" height="6" rx="3" fill="#3A4152" />
+
+                <rect x="24" y="218" width="352" height="26" rx="6" fill="#171B24" stroke="#242936" />
+                <circle cx="42" cy="231" r="6" fill="none" stroke="#3A4152" />
+                <rect x="60" y="228" width="124" height="6" rx="3" fill="#2E3444" />
+              </svg>
+            </div>
+            <div class="project__body">
+              <p class="tags">
+                <span class="tag tag--client"><i aria-hidden="true"></i><span data-pt="interface"
+                    data-en="interface">interface</span></span>
+                <span class="tag tag--server"><i aria-hidden="true"></i><span data-pt="sistema"
+                    data-en="system">sistema</span></span>
+              </p>
+              <h3 class="project__name">English for Dev</h3>
+              <p class="project__desc"
+                data-pt="Plataforma de inglês para desenvolvedores com exercícios gerados por IA. Next.js 16, React 19, Prisma e Google Gemini, com suíte de testes em Vitest."
+                data-en="English platform for developers with AI-generated exercises. Next.js 16, React 19, Prisma and Google Gemini, with a Vitest test suite.">
+                Plataforma de inglês para desenvolvedores com exercícios gerados por IA. Next.js 16, React 19, Prisma e
+                Google Gemini, com suíte de testes em Vitest.</p>
+              <p class="project__stack">Next.js · React 19 · TypeScript · Prisma · PostgreSQL · Gemini · Docker</p>
+              <p class="project__links">
+                <a class="link" href="https://github.com/jvsantosdev" target="_blank" rel="noopener">
+                  <span>GitHub</span>
+                  <svg viewBox="0 0 16 16" aria-hidden="true">
+                    <path d="M5 11L11 5M6 5h5v5" fill="none" stroke="currentColor" stroke-width="1.6"
+                      stroke-linecap="round" stroke-linejoin="round" />
+                  </svg>
+                </a>
+              </p>
+            </div>
+          </article>
+
+          <!-- Projeto 3: Triagem Laboratorial Automatizada (card largo) -->
+          <article class="project project--wide reveal">
+            <div class="project__thumb">
+              <svg viewBox="0 0 400 250" aria-hidden="true">
+                <rect width="400" height="250" rx="10" fill="#12151C" />
+                <circle cx="24" cy="26" r="5" fill="#2E3444" />
+                <circle cx="42" cy="26" r="5" fill="#2E3444" />
+                <circle cx="60" cy="26" r="5" fill="#2E3444" />
+                <rect x="86" y="19" width="140" height="14" rx="7" fill="#171B24" />
+                <rect x="316" y="16" width="64" height="20" rx="10" fill="#FF6B4A" fill-opacity=".13" stroke="#FF6B4A"
+                  stroke-opacity=".5" />
+                <text x="348" y="30" text-anchor="middle" fill="#FF6B4A" font-family="IBM Plex Mono, monospace"
+                  font-size="10" data-pt="exames" data-en="tests">exames</text>
+                <line x1="0" y1="46" x2="400" y2="46" stroke="#1D222E" />
+
+                <!-- paciente -->
+                <rect x="24" y="62" width="176" height="74" rx="10" fill="#171B24" stroke="#242936" />
+                <circle cx="52" cy="88" r="13" fill="#2E3444" />
+                <rect x="76" y="78" width="86" height="7" rx="3.5" fill="#3A4152" />
+                <rect x="76" y="92" width="60" height="6" rx="3" fill="#2E3444" />
+                <rect x="40" y="112" width="30" height="15" rx="7.5" fill="#FF6B4A" fill-opacity=".14" />
+                <text x="55" y="123" text-anchor="middle" fill="#FF6B4A" font-family="IBM Plex Mono, monospace"
+                  font-size="9">F</text>
+
+                <!-- resultado da análise -->
+                <rect x="216" y="62" width="160" height="74" rx="10" fill="#FF6B4A" fill-opacity=".1" stroke="#FF6B4A"
+                  stroke-opacity=".45" />
+                <rect x="232" y="76" width="44" height="5" rx="2.5" fill="#FF6B4A" fill-opacity=".5" />
+                <text x="232" y="101" fill="#FF6B4A" font-family="IBM Plex Mono, monospace" font-size="15">126
+                  mg/dL</text>
+                <rect x="232" y="110" width="84" height="15" rx="7.5" fill="#FF6B4A" fill-opacity=".16" />
+                <text x="274" y="121" text-anchor="middle" fill="#FF6B4A" font-family="IBM Plex Mono, monospace"
+                  font-size="9" data-pt="alterado" data-en="out of range">alterado</text>
+
+                <!-- tabela de referência -->
+                <rect x="24" y="150" width="352" height="82" rx="10" fill="#171B24" stroke="#242936" />
+                <rect x="40" y="164" width="56" height="5" rx="2.5" fill="#2E3444" />
+                <rect x="212" y="164" width="44" height="5" rx="2.5" fill="#2E3444" />
+                <rect x="322" y="164" width="38" height="5" rx="2.5" fill="#2E3444" />
+                <rect x="40" y="184" width="96" height="6" rx="3" fill="#3A4152" />
+                <rect x="212" y="184" width="48" height="6" rx="3" fill="#2E3444" />
+                <rect x="316" y="180" width="44" height="14" rx="7" fill="#FF6B4A" fill-opacity=".5" />
+                <rect x="40" y="202" width="76" height="6" rx="3" fill="#2E3444" />
+                <rect x="212" y="202" width="40" height="6" rx="3" fill="#2E3444" />
+                <rect x="316" y="198" width="44" height="14" rx="7" fill="#2E3444" />
+                <rect x="40" y="220" width="84" height="6" rx="3" fill="#2E3444" />
+                <rect x="212" y="220" width="44" height="6" rx="3" fill="#2E3444" />
+                <rect x="316" y="216" width="44" height="14" rx="7" fill="#2E3444" />
+              </svg>
+            </div>
+            <div class="project__body">
+              <p class="tags">
+                <span class="tag tag--client"><i aria-hidden="true"></i><span data-pt="interface"
+                    data-en="interface">interface</span></span>
+              </p>
+              <h3 class="project__name">Triagem Laboratorial Automatizada</h3>
+              <p class="project__desc"
+                data-pt="Sistema web de triagem e análise preliminar de exames de rotina — glicemia, hemograma e série branca — com tabelas de referência laboratoriais reais e histórico de pacientes salvo no navegador."
+                data-en="Web system for triage and preliminary analysis of routine lab tests — fasting glucose, blood count and white series — with real lab reference ranges and patient history saved in the browser.">
+                Sistema web de triagem e análise preliminar de exames de rotina — glicemia, hemograma e série branca —
+                com tabelas de referência laboratoriais reais e histórico de pacientes salvo no navegador.</p>
+              <p class="project__stack">HTML · CSS · JavaScript · localStorage</p>
+              <p class="project__links">
+                <a class="link" href="https://github.com/jvsantosdev/Triagem-Laboratorial-Automatizada" target="_blank"
+                  rel="noopener">
+                  <span data-pt="Ver repositório" data-en="View repository">Ver repositório</span>
+                  <svg viewBox="0 0 16 16" aria-hidden="true">
+                    <path d="M5 11L11 5M6 5h5v5" fill="none" stroke="currentColor" stroke-width="1.6"
+                      stroke-linecap="round" stroke-linejoin="round" />
+                  </svg>
+                </a>
+              </p>
+            </div>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ SOBRE ============ -->
+    <section class="section" id="sobre">
+      <div class="container">
+
+        <header class="section__head reveal">
+          <p class="route">
+            <span class="route__dot" aria-hidden="true"></span>
+            <span class="route__path" data-pt="/sobre" data-en="/about">/sobre</span>
+            <span class="route__rule" aria-hidden="true"></span>
+          </p>
+          <h2 class="section__title">
+            <span data-pt="Quem está" data-en="Who's">Quem está</span><br>
+            <span data-pt="por trás." data-en="behind this.">por trás.</span>
+          </h2>
+        </header>
+
+        <div class="about">
+          <div class="about__prose reveal">
+            <p class="about__first"
+              data-pt="Me formei em Biomedicina antes de virar desenvolvedor. A formação científica me deu um método claro: investigar, testar, só então concluir. Isso também me fez gostar de health tech."
+              data-en="I earned a degree in Biomedicine before becoming a developer. My scientific background provided me with a clear method: investigate, test, and only then draw a conclusion. This has also led me to develop an interest in health tech.">
+              Formei-me em Biomedicina antes de virar desenvolvedor. A formação científica me deu método — investigar,
+              testar, só então concluir — e o gosto por health tech.</p>
+            <p data-pt="Hoje sou Full Stack Developer na Founding, em Brasília, trabalho remoto: aplicações de ponta a ponta com TypeScript, React, Angular e Python; features de IA com LLMs e RAG; APIs REST, filas assíncronas e deploy com Docker e CI/CD."
+              data-en="Today I'm a Full Stack Developer at Founding, in Brasília, working remotely: I build end-to-end applications using TypeScript, React, Angular, and Python; I also develop AI features with LLMs and RAG, and handle REST APIs, background queues, and deployments with Docker and CI/CD.">
+              Hoje sou Full Stack Developer na Founding, em Brasília, trabalho remoto: aplicações de ponta a ponta com
+              TypeScript, React, Angular e Python; features de IA com LLMs e RAG; APIs REST, filas assíncronas e deploy
+              com Docker e CI/CD.</p>
+
+            <dl class="facts">
+              <div class="facts__row">
+                <dt data-pt="agora" data-en="now">agora</dt>
+                <dd>Full Stack · Founding</dd>
+              </div>
+              <div class="facts__row">
+                <dt data-pt="base" data-en="base">base</dt>
+                <dd data-pt="Brasília · remoto" data-en="Brasília · remote">Brasília · remoto</dd>
+              </div>
+              <div class="facts__row">
+                <dt data-pt="foco" data-en="focus">foco</dt>
+                <dd data-pt="full-stack · IA" data-en="full-stack · AI">full-stack · IA</dd>
+              </div>
+              <div class="facts__row">
+                <dt data-pt="idiomas" data-en="languages">idiomas</dt>
+                <dd data-pt="PT-BR nativo · EN fluente" data-en="PT-BR native · EN fluent">PT-BR nativo · EN fluente
+                </dd>
+              </div>
+              <div class="facts__row">
+                <dt data-pt="formação" data-en="education">formação</dt>
+                <dd data-pt="Biomedicina · UniLS, 2024" data-en="Biomedical Sciences · UniLS, 2024">Biomedicina · UniLS,
+                  2024</dd>
+              </div>
+            </dl>
+          </div>
+
+          <div class="code reveal" aria-label="João Vítor em forma de código"
+            data-aria-pt="João Vítor em forma de código" data-aria-en="João Vítor as code">
+            <div class="code__bar" aria-hidden="true">
+              <i></i><i></i><i></i>
+              <span>joao.js</span>
+            </div>
+            <pre class="code__body"><code><span class="c-kw">const</span> <span class="c-fn">joao</span> = {
+  <span class="c-key" data-pt="papel" data-en="role">papel</span>: <span class="c-str" data-pt="'dev full-stack'" data-en="'full-stack dev'">'dev full-stack'</span>,
+  <span class="c-key">stack</span>: [<span class="c-str">"TypeScript"</span>, <span class="c-str">"Python"</span>, <span class="c-str">"PostgreSQL"</span>],
+  <span class="c-key" data-pt="agora" data-en="now">agora</span>: <span class="c-str" data-pt="'IA: LLM + RAG'" data-en="'AI: LLM + RAG'">'IA: LLM + RAG'</span>,
+  <span class="c-key" data-pt="interesse" data-en="interest">interesse</span>: <span class="c-str">"health tech"</span>,
+  <span class="c-key" data-pt="idiomas" data-en="languages">idiomas</span>: [<span class="c-str">"PT-BR"</span>, <span class="c-str">"EN"</span>]
+}</code></pre>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ============ HABILIDADES ============ -->
+    <section class="section" id="habilidades">
+      <div class="container">
+
+        <header class="section__head reveal">
+          <p class="route">
+            <span class="route__dot route__dot--split" aria-hidden="true"></span>
+            <span class="route__path" data-pt="/habilidades" data-en="/skills">/habilidades</span>
+            <span class="route__rule" aria-hidden="true"></span>
+          </p>
+          <h2 class="section__title">
+            <span data-pt="Duas camadas," data-en="Two layers,">Duas camadas,</span><br>
+            <span data-pt="um mesmo dev." data-en="one developer.">um mesmo dev.</span>
+          </h2>
+          <p class="section__lede" data-pt="A linha do meio é onde a maioria para. Eu trabalho dos dois lados dela."
+            data-en="The line in the middle is where most people stop. I work on both sides of it.">A linha do meio é
+            onde a maioria para. Eu trabalho dos dois lados dela.</p>
+        </header>
+
+        <div class="split reveal">
+          <div class="split__col split__col--client">
+            <h3 class="split__title">
+              <span class="split__swatch" aria-hidden="true"></span>
+              <span data-pt="Interface" data-en="Interface">Interface</span>
+            </h3>
+            <ul class="split__list">
+              <li data-pt="TypeScript, React e Next.js" data-en="TypeScript, React and Next.js">TypeScript, React e
+                Next.js</li>
+              <li data-pt="Angular e React 19" data-en="Angular and React 19">Angular e React 19</li>
+              <li data-pt="HTML semântica e acessibilidade" data-en="Semantic HTML and accessibility">HTML semântica e
+                acessibilidade</li>
+              <li data-pt="CSS, Tailwind e UI responsiva" data-en="CSS, Tailwind and responsive UI">CSS, Tailwind e UI
+                responsiva</li>
+              <li data-pt="Testes com Vitest e Testing Library" data-en="Tests with Vitest and Testing Library">Testes
+                com Vitest e Testing Library</li>
+            </ul>
+          </div>
+
+          <div class="split__spine" aria-hidden="true"><span>full-stack</span></div>
+
+          <div class="split__col split__col--server">
+            <h3 class="split__title">
+              <span class="split__swatch" aria-hidden="true"></span>
+              <span data-pt="Sistema" data-en="System">Sistema</span>
+            </h3>
+            <ul class="split__list">
+              <li data-pt="Python, FastAPI e Node.js" data-en="Python, FastAPI and Node.js">Python, FastAPI e Node.js
+              </li>
+              <li data-pt="APIs REST e contratos OpenAPI" data-en="REST APIs and OpenAPI contracts">APIs REST e
+                contratos OpenAPI</li>
+              <li data-pt="PostgreSQL, MongoDB e Supabase" data-en="PostgreSQL, MongoDB and Supabase">PostgreSQL,
+                MongoDB and Supabase</li>
+              <li data-pt="Docker, CI/CD e jobs assíncronos" data-en="Docker, CI/CD and background jobs">Docker, CI/CD e
+                jobs assíncronos</li>
+              <li data-pt="Filas com RabbitMQ e automação com n8n" data-en="RabbitMQ queues and n8n automation">Filas
+                com RabbitMQ e automação com n8n</li>
+            </ul>
+          </div>
+        </div>
+
+        <p class="span-band reveal">
+          <span class="span-band__label" data-pt="em ambos os lados" data-en="on both sides">em ambos os lados</span>
+          <span class="span-band__items">LLMs · RAG · Google Gemini · OpenAI SDK · LangGraph · MLflow · Docker · code
+            review</span>
+        </p>
+
+      </div>
+    </section>
+
+    <!-- ============ CONTATO ============ -->
+    <section class="section section--contact" id="contato">
+      <div class="container">
+
+        <header class="section__head reveal">
+          <p class="route">
+            <span class="route__dot" aria-hidden="true"></span>
+            <span class="route__path" data-pt="/contato" data-en="/contact">/contato</span>
+            <span class="route__rule" aria-hidden="true"></span>
+          </p>
+          <h2 class="section__title">
+            <span data-pt="Vamos construir" data-en="Let's build">Vamos construir</span><br>
+            <span data-pt="algo juntos?" data-en="something together?">algo juntos?</span>
+          </h2>
+        </header>
+
+        <div class="contact">
+          <div class="contact__intro reveal">
+            <p class="section__lede section__lede--tight"
+              data-pt="Conte o que você quer construir, estou aberto a oportunidades full-time."
+              data-en="Tell me what you want to build, I'm open to full-time opportunities.">Conte o que você quer
+              construir, estou aberto a oportunidades full-time.</p>
+
+            <ul class="contact__links">
+              <li>
+                <a class="crow" href="mailto:joao.vitor.soliveiradev@gmail.com">
+                  <span class="crow__label" data-pt="e-mail" data-en="email">e-mail</span>
+                  <span class="crow__value">joao.vitor.soliveiradev@gmail.com</span>
+                  <svg viewBox="0 0 16 16" aria-hidden="true">
+                    <path d="M5 11L11 5M6 5h5v5" fill="none" stroke="currentColor" stroke-width="1.6"
+                      stroke-linecap="round" stroke-linejoin="round" />
+                  </svg>
+                </a>
+              </li>
+              <li>
+                <a class="crow" href="tel:+5561991469676">
+                  <span class="crow__label" data-pt="telefone" data-en="phone">telefone</span>
+                  <span class="crow__value">(61) 99146-9676</span>
+                  <svg viewBox="0 0 16 16" aria-hidden="true">
+                    <path d="M5 11L11 5M6 5h5v5" fill="none" stroke="currentColor" stroke-width="1.6"
+                      stroke-linecap="round" stroke-linejoin="round" />
+                  </svg>
+                </a>
+              </li>
+              <li>
+                <a class="crow" href="https://github.com/jvsantosdev" target="_blank" rel="noopener">
+                  <span class="crow__label">github</span>
+                  <span class="crow__value">github.com/jvsantosdev</span>
+                  <svg viewBox="0 0 16 16" aria-hidden="true">
+                    <path d="M5 11L11 5M6 5h5v5" fill="none" stroke="currentColor" stroke-width="1.6"
+                      stroke-linecap="round" stroke-linejoin="round" />
+                  </svg>
+                </a>
+              </li>
+              <li>
+                <a class="crow" href="https://www.linkedin.com/in/jo%C3%A3o-vitor-santos-de-oliveira-68aa9b187"
+                  target="_blank" rel="noopener">
+                  <span class="crow__label">linkedin</span>
+                  <span class="crow__value">linkedin.com/in/joão-vitor-santos-de-oliveira-68aa9b187</span>
+                  <svg viewBox="0 0 16 16" aria-hidden="true">
+                    <path d="M5 11L11 5M6 5h5v5" fill="none" stroke="currentColor" stroke-width="1.6"
+                      stroke-linecap="round" stroke-linejoin="round" />
+                  </svg>
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          <form class="form reveal" id="contactForm" novalidate>
+            <div class="field">
+              <label for="f-name" data-pt="Nome" data-en="Name">Nome</label>
+              <input type="text" id="f-name" name="name" autocomplete="name" placeholder="Como devo te chamar?"
+                data-ph-pt="Como devo te chamar?" data-ph-en="What should I call you?" aria-describedby="e-name">
+              <p class="field__err" id="e-name" role="alert"></p>
+            </div>
+
+            <div class="field">
+              <label for="f-email" data-pt="E-mail" data-en="Email">E-mail</label>
+              <input type="email" id="f-email" name="email" autocomplete="email" placeholder="seu@email.com"
+                data-ph-pt="seu@email.com" data-ph-en="you@email.com" aria-describedby="e-email">
+              <p class="field__err" id="e-email" role="alert"></p>
+            </div>
+
+            <div class="field">
+              <label for="f-msg" data-pt="Mensagem" data-en="Message">Mensagem</label>
+              <textarea id="f-msg" name="message" rows="5" placeholder="Escreva sobre o projeto..."
+                data-ph-pt="Escreva sobre o projeto..." data-ph-en="Tell me about the project..."
+                aria-describedby="e-msg"></textarea>
+              <p class="field__err" id="e-msg" role="alert"></p>
+            </div>
+
+            <button class="btn btn--solid btn--block" type="submit">
+              <span data-pt="Enviar mensagem" data-en="Send message">Enviar mensagem</span>
+              <svg viewBox="0 0 16 16" aria-hidden="true" class="btn__arrow">
+                <path d="M3 8h10M9 4l4 4-4 4" fill="none" stroke="currentColor" stroke-width="1.6"
+                  stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+            </button>
+
+            <p class="form__status" id="formStatus" role="status" aria-live="polite"></p>
+          </form>
+        </div>
+
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="footer">
+    <div class="container footer__inner">
+      <p class="footer__copy">© <span id="year">2026</span> João Vítor Santos de Oliveira</p>
+      <p class="footer__made" data-pt="Feito com HTML, CSS e JavaScript" data-en="Built with HTML, CSS and JavaScript">
+        Feito com HTML, CSS e JavaScript</p>
+      <a class="footer__top" href="#top">
+        <span data-pt="Voltar ao topo" data-en="Back to top">Voltar ao topo</span>
+        <svg viewBox="0 0 16 16" aria-hidden="true">
+          <path d="M8 13V3M4 7l4-4 4 4" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"
+            stroke-linejoin="round" />
+        </svg>
+      </a>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
