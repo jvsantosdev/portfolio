@@ -73,6 +73,8 @@ Para usar um backend de verdade, troque o bloco `form.addEventListener("submit",
 
 ## Deploy
 
+**No ar:** https://portfolio-acme-4162.vercel.app (Vercel, deploy automático a cada push na `main`)
+
 É estático — qualquer host serve:
 
 - **GitHub Pages**: suba os arquivos e ative Pages na branch principal.
