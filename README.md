@@ -73,7 +73,7 @@ Para usar um backend de verdade, troque o bloco `form.addEventListener("submit",
 
 ## Deploy
 
-**No ar:** https://portfolio-acme-4162.vercel.app (Vercel, deploy automático a cada push na `main`)
+**No ar:** https://portfolio-joaovs.vercel.app (Vercel, deploy automático a cada push na `main`)
 
 É estático — qualquer host serve:
 
