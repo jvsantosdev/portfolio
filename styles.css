@@ -867,19 +867,6 @@ input, textarea { font: inherit; }
 @media (min-width: 900px) {
   .projects { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 
-  /* card largo: ocupa a linha inteira e vira layout horizontal */
-  .project--wide {
-    grid-column: 1 / -1;
-    display: grid;
-    grid-template-columns: minmax(0, 1.05fr) minmax(0, 1fr);
-  }
-  .project--wide .project__thumb {
-    display: flex;
-    align-items: center;
-    border-bottom: 0;
-    border-right: 1px solid var(--line);
-  }
-
   /* Sobre: retrato | prosa | painel de código */
   .about {
     grid-template-columns: 190px minmax(0, 1fr) minmax(0, 1.05fr);
